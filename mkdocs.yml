@@ -1,0 +1,41 @@
+site_name: Physical Celestial Objects
+theme:
+  name: material
+  custom_dir: theme-extension
+  favicon: img/favicon.svg
+  logo: img/psa-logo.svg
+  palette:
+    primary: black
+  features:
+    - tabs
+plugins:
+  - search
+# site_url: https://www.physicaladdons.com/pco/
+google_analytics: ['UA-86947939-2', 'auto']
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+  - abbr
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/PhysicalAddons
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/upitismartins_digital/
+    - icon: fontawesome/brands/github
+      link: https://github.com/PhysicalAddons/
