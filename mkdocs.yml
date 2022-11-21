@@ -11,7 +11,6 @@ theme:
 plugins:
   - search
 # site_url: https://www.physicaladdons.com/pco/
-# google_analytics: ['UA-86947939-2', 'auto']
 markdown_extensions:
   - admonition
   - pymdownx.details
