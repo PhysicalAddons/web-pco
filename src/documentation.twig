@@ -1,0 +1,189 @@
+{% set documentation = [
+    {
+        'name': 'General',
+        'icon': 'icons/blender-icons/light_sun.svg',
+        'parameters': [
+            {
+                'name': 'Sun',
+                'excerpt': 'Select source of light. ',
+                'description': 'By default selects Physical Starlight and Atmosphere sun if addon is installed and enabled.'
+            },
+            {
+                'name': 'Planets',
+                'excerpt': 'Add or remove planet.',
+                'description': 'Allows planets to be added, removed and renamed for your convenience. Maximum count of planet is determined by ones hardware specification.'
+            },
+        ]
+    },
+    {
+        'name': 'Planet',
+        'icon': 'icons/blender-icons/world_data.svg',
+        'parameters': [
+            {
+                'name': 'Albedo',
+                'excerpt': 'Color map of the planet.',
+                'description': 'Sets color or applies color map texture to the planet.'
+            },
+            {
+                'name': 'Roughness',
+                'excerpt': 'Sets how rought is the planet surface.',
+                'description': 'Surface roughness, also termed landscape, terrain, or topographic roughness in geomorphology, is directly connected to the unevenness of surface elevation values.'
+
+            },
+            {
+                'name': 'Height',
+                'excerpt': 'Gives planet its highs and lows.',
+                'description': 'Applies displacement map (also known as a height map or elevation map) to the surface.'
+            },
+            {
+                'name': 'Emission',
+                'excerpt': 'Make certain parts of the planet emit light.',
+                'description': 'Applies emission map (also known as emissive map).'
+            },
+            {
+                'name': 'Emission strength',
+                'excerpt': 'Determines brightness of the parts that emit light.',
+                'description': ''
+            },
+        ]
+    },
+
+    {
+        'name': 'Atmosphere',
+        'icon': 'icons/blender-icons/sticky_uvs_disable.svg',
+        'parameters': [
+            {
+                'name': 'Radius',
+                'excerpt': 'Radius of the atmosphere.',
+                'description': '',
+            },
+            {
+                'name': 'Density',
+                'excerpt': 'Atmosphere density.',
+                'description': '',
+            },
+             {
+                'name': 'Rayleigh Insattering',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Rayleigh Scale Height',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Mie Inscattering',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Mie Scale Height',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Noise Jitter',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Reflection Jitter Miltiplier',
+                'excerpt': '',
+                'description': '',
+            },
+        ]
+    },
+
+    {
+        'name': 'Rings',
+        'icon': 'icons/blender-icons/mod_fluid.svg',
+        'parameters': [
+            {
+                'name': 'Texture',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Color Tint',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Rotation',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Inner Radius',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Outer Radius',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Indirect Shadow Factor',
+                'excerpt': '',
+                'description': '',
+            },
+            {
+                'name': 'Translucency',
+                'excerpt': '',
+                'description': '',
+            },
+        ]
+    },
+    {
+        'name': 'Transform',
+        'icon': 'icons/blender-icons/mod_fluid.svg',
+        'parameters': [
+            {
+                'name': 'Radius',
+                'excerpt': 'Radius of the planet.',
+                'description': '',
+            },
+            {
+                'name': 'Rotation',
+                'excerpt': 'Rotation of the planet.',
+                'description': '',
+            },
+            {
+                'name': 'Transform mode',
+                'excerpt': 'Selection between ways of posistioning planets.',
+                'description': 'Select between global (X, Y, Z), viewer-based (azimuth, elevation & distance) or elliptical orbit (ellipse width & height + orbit rotation) positioning modes.',
+            },
+
+        ]
+    }
+   
+]%}
+
+!!! tip ""
+    Hey :wave:, first time here? You can find the installation guide and first run in the [getting started](/pco/getting-started/) section.
+
+!!! warning ""
+    ⚠️ We are currently updating documentation. Some of the entries may be empty. 
+
+* [General](#general)
+* [Planet](#planet)
+* [Atmosphere](#atmosphere)
+* [Rings](#rings)
+* [Transform](#transform)
+
+{% for section in documentation %}
+## <span class="twemoji">{% include section.icon %}</span> {{ section.name }}
+{% for parameter in section.parameters %}
+### {{ parameter.name }}
+<div class="parameter">
+    <div class="parameter__info">
+        <span>{{ parameter.excerpt }}</span>{% if parameter.description != '' %}<span style="margin-left: 4px; color: rgba(0,0,0,.5)">{{ parameter.description }}</span>{% endif %}
+    </div>
+    <div class="parameter__video">{% if parameter.video and parameter.video.src %}<video autoplay loop muted playsinline ><source src="{{parameter.video.src}}" type="video/mp4"></video>{% elseif parameter.image %}<img src="{{parameter.image.src}}" alt="{{parameter.image.alt}}" />{% endif %}</div>
+</div>
+{% if parameter.image_post %}<div class="parameter mb-64"><img src="{{parameter.image_post.src}}" alt="{{parameter.image_post.alt}}" /></div>{% endif %}
+{% endfor %}
+{% if section.post_block %}{{section.post_block}}{% endif %}
+{% endfor %}

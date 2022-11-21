@@ -3,15 +3,15 @@ theme:
   name: material
   custom_dir: theme-extension
   favicon: img/favicon.svg
-  logo: img/psa-logo.svg
+  logo: img/pco-logo.svg
   palette:
     primary: black
   features:
-    - tabs
+    - navigation.top
 plugins:
   - search
 # site_url: https://www.physicaladdons.com/pco/
-google_analytics: ['UA-86947939-2', 'auto']
+# google_analytics: ['UA-86947939-2', 'auto']
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -25,10 +25,14 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - toc:
+      toc_depth: '1-2'
       permalink: true
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
+  - Documentation: documentation.md
+  - FAQ and contacts: faq-and-contacts.md
+  # - Release notes: release-notes.md
 extra_css:
   - stylesheets/extra.css
 extra:
@@ -36,6 +40,6 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/PhysicalAddons
     - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/upitismartins_digital/
+      link: https://www.instagram.com/PhysicalAddons/
     - icon: fontawesome/brands/github
       link: https://github.com/PhysicalAddons/
