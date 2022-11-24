@@ -1,16 +1,16 @@
-### 1.0.0-beta <small>- released 24.11.2022</small>
+### 0.2.0-alpha <small>- released 24.11.2022</small>
 
 <!-- [![Release 1.1.0 banner](img/releases/pco1.6.0.jpg)](img/releases/pcoa0.1.0.jpg) -->
 
 !!! warning ""
-    We are still tackling issue where planet is not appearing due to uninitialized drivers. We have added "Reinitialize drivers" button that after a parameter change will reinitialize drivers.
+    We are still tackling the issue where a planet is not appearing due to uninitialized drivers. We have added the "Reinitialize drivers" button that after a parameter change will reinitialize drivers.
 
 `new:`{: .label-new }
 
-- Ability to add the rings to the planet.
+- Ability to add the **rings** to the planet.
 - User Interface for the rings.
-- Added material texture color space settings directly in user interface for convenience.
-- Rearranged UI blocks in a more intuitive fashion and to maintain consistency between addons.
+- Added material texture color space settings directly in the user interface for convenience.
+- Rearranged UI blocks in a more intuitive fashion and also to maintain consistency between addons.
 
 
 `improvements:`{: .label-improvements }
@@ -18,7 +18,7 @@
 - Optimized PSA integration.
 - Sun angular diameter now affects all lighting calculations. 
 - Completely rewritten the way how nodes are generated.
-- Cleanup node groups to improve general performance.
+- Clean up node groups to improve general performance.
 - Nodes are now organized in a way to improve readability.
 
 `fixed:`{: .label-fixed }
@@ -26,4 +26,7 @@
 - Fixed wrong blending of planet depth.
 - Fixed cases when some of the drivers were not linked.
 
-
+!!! info "Having errors when updating addon?"
+    1. Remove previous addon version
+    2. Restart blender
+    3. Install new addon version
