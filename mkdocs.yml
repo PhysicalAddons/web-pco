@@ -10,7 +10,7 @@ theme:
     - navigation.top
 plugins:
   - search
-# site_url: https://www.physicaladdons.com/pco/
+site_url: https://www.physicaladdons.com/pco/
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -35,6 +35,8 @@ nav:
 extra_css:
   - stylesheets/extra.css
 extra:
+  analytics:
+    provider: plausible
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/PhysicalAddons
