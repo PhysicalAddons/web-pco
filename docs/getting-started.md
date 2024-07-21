@@ -25,8 +25,8 @@ Latest _Physical Celestial Objects_ version is supported by [Blender 3.3+](https
 - Wait till it registers. Voila!
 
 ## First Run
-- Locate _Physical Celestial Objects_ panel in the [Sidebar](https://docs.blender.org/manual/en/latest/interface/window_system/regions.html#sidebar)
-also called _N Panel_ . Click on the tab _PCO_ to reveal it.
+- Locate the _Physical Celestial Objects_ panel in the [Sidebar](https://docs.blender.org/manual/en/latest/interface/window_system/regions.html#sidebar)
+also called _N Panel_. Click on the tab _PCO_ to reveal it.
 - Enable the add-on by ticking the uppermost checkbox.
 
 !!! important
