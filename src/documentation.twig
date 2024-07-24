@@ -1,11 +1,11 @@
 {% set documentation = [
     {
         'name': 'General',
-        'icon': 'icons/blender-icons/light_sun.svg',
+        'icon': 'icons/blender-icons/WORLD.svg',
         'parameters': [
             {
                 'name': 'Sun',
-                'excerpt': 'Select source of light. ',
+                'excerpt': 'Select source of light.',
                 'description': 'By default selects Physical Starlight and Atmosphere sun if addon is installed and enabled.'
             },
             {
@@ -13,11 +13,82 @@
                 'excerpt': 'Add or remove planet.',
                 'description': 'Allows planets to be added, removed and renamed for your convenience. Maximum count of planet is determined by ones hardware specification.'
             },
+            {
+                'name': 'Reinitialize Drivers',
+                'excerpt': '',
+                'description': ''
+            }
         ]
     },
     {
-        'name': 'Planet',
-        'icon': 'icons/blender-icons/world_data.svg',
+        'name': 'Transform',
+        'icon': 'icons/blender-icons/ORIENTATION_GLOBAL.svg',
+        'parameters': [
+            {
+                'name': 'Radius',
+                'excerpt': 'Radius of the planet.',
+                'description': '',
+            },
+            {
+                'name': 'Rotation',
+                'excerpt': 'Rotation of the planet.',
+                'description': '',
+            },
+            {
+                'name': 'Transform mode',
+                'excerpt': 'Selection between ways of posistioning planets.',
+                'description': 'Select between global (X, Y, Z), viewer-based (azimuth, elevation & distance) or elliptical orbit (ellipse width & height + orbit rotation) positioning modes.',
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            },
+            {
+                'name': '',
+                'excerpt': '',
+                'description': ''
+            }
+        ]
+    },
+    {
+        'name': 'Surface Material',
+        'icon': 'icons/blender-icons/MATERIAL.svg',
         'parameters': [
             {
                 'name': 'Albedo',
@@ -41,16 +112,15 @@
                 'description': 'Applies emission map (also known as emissive map).'
             },
             {
-                'name': 'Emission strength',
+                'name': 'Emission Strength',
                 'excerpt': 'Determines brightness of the parts that emit light.',
                 'description': ''
             },
         ]
     },
-
     {
         'name': 'Atmosphere',
-        'icon': 'icons/blender-icons/sticky_uvs_disable.svg',
+        'icon': 'icons/blender-icons/PROP_ON.svg',
         'parameters': [
             {
                 'name': 'Radius',
@@ -58,46 +128,78 @@
                 'description': '',
             },
             {
-                'name': 'Density',
-                'excerpt': 'Atmosphere density.',
-                'description': '',
-            },
-             {
-                'name': 'Rayleigh Insattering',
+                'name': 'Ambient Light',
                 'excerpt': '',
                 'description': '',
             },
             {
-                'name': 'Rayleigh Scale Height',
+                'name': 'Rayleigh Scattering',
                 'excerpt': '',
                 'description': '',
             },
             {
-                'name': 'Mie Inscattering',
+                'name': 'Mie Scattering',
                 'excerpt': '',
                 'description': '',
             },
             {
-                'name': 'Mie Scale Height',
+                'name': 'Atmosphere Layer',
                 'excerpt': '',
                 'description': '',
+            },
+            {
+                'name': 'Visible',
+                'excerpt': '',
+            },
+            {
+                'name': 'Density Exponent',
+                'excerpt': '',
+            },
+            {
+                'name': 'Start Level',
+                'excerpt': '',
+            },
+            {
+                'name': 'End Level',
+                'excerpt': '',
+            },
+            {
+                'name': 'Center of Density',
+                'excerpt': '',
+            },
+            {
+                'name': 'Scattering',
+                'excerpt': '',
+            },
+            {
+                'name': 'Absorption',
+                'excerpt': '',
+            },
+            {
+                'name': 'Emission',
+                'excerpt': '',
+            },
+            {
+                'name': 'Scattering Coefficient',
+                'excerpt': '',
+            },
+            {
+                'name': 'Layer Density',
+                'excerpt': 'Value, Texture and Aurora.',
             },
             {
                 'name': 'Noise Jitter',
                 'excerpt': '',
-                'description': '',
             },
             {
-                'name': 'Reflection Jitter Miltiplier',
+                'name': 'Reflection Jitter Multiplier',
                 'excerpt': '',
-                'description': '',
             },
         ]
     },
-
     {
         'name': 'Rings',
-        'icon': 'icons/blender-icons/mod_fluid.svg',
+        'icon': 'icons/blender-icons/PROP_OFF.svg',
         'parameters': [
             {
                 'name': 'Texture',
@@ -134,28 +236,6 @@
                 'excerpt': '',
                 'description': '',
             },
-        ]
-    },
-    {
-        'name': 'Transform',
-        'icon': 'icons/blender-icons/mod_fluid.svg',
-        'parameters': [
-            {
-                'name': 'Radius',
-                'excerpt': 'Radius of the planet.',
-                'description': '',
-            },
-            {
-                'name': 'Rotation',
-                'excerpt': 'Rotation of the planet.',
-                'description': '',
-            },
-            {
-                'name': 'Transform mode',
-                'excerpt': 'Selection between ways of posistioning planets.',
-                'description': 'Select between global (X, Y, Z), viewer-based (azimuth, elevation & distance) or elliptical orbit (ellipse width & height + orbit rotation) positioning modes.',
-            },
-
         ]
     }
    
