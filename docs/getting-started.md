@@ -35,9 +35,11 @@ also called _N Panel_. Click on the tab _PCO_ to reveal it.
 !!! info
     When adding the planet, it will first appear in the scene origin and will seem small. You can add realistic sizes, distances in the transform options eg. moon size/distance.
 
-[![Enable PSA](img/ENABLE_PCO_v020.jpg)](img/ENABLE_PCO_v020.jpg)
+[![Enable PSA](img/ENABLE_PCO.jpg)](img/ENABLE_PCO.jpg)
 
 - Disable the add-on by ticking the uppermost checkbox.
+
+[![Enable PSA](img/DISABLE_PCO.jpg)](img/DISABLE_PCO.jpg)
 
 !!! summary "What happens when a Planet is added?"
     - <MĀRTINŠ>.
