@@ -39,7 +39,7 @@ also called _N Panel_. Click on the tab _PCO_ to reveal it.
 
 - Disable the add-on by ticking the uppermost checkbox.
 
-!!! summary "What happens when the atmosphere is added?"
+!!! summary "What happens when a Planet is added?"
     - <MĀRTINŠ>.
 
 ## Preferences
@@ -58,15 +58,13 @@ Properties panel. Setting this to `false` will hide the toolbar. Reveal panel by
 ## Presets
 Presets store a snapshot of a predefined celestial object.
 
-<add preset picture>
-
 The add-on comes with 3 different presets.
 
 - `Earth`
 - `Mars`
 - `Saturn`
 
-### Using presets
+### How to use presets
 
 <MĀRTIŅŠ>        
 
