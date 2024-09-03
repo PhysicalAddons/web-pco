@@ -10,7 +10,7 @@
 - Ability to add the **rings** to the planet.
 - User Interface for the rings.
 - Added material texture color space settings directly in the user interface for convenience.
-- Rearranged UI blocks in a more intuitive fashion and also to maintain consistency between addons.
+- Rearranged UI blocks in a more intuitive fashion and also to maintain consistency between add-ons.
 
 
 `improvements:`{: .label-improvements }
@@ -26,7 +26,7 @@
 - Fixed wrong blending of planet depth.
 - Fixed cases when some of the drivers were not linked.
 
-!!! info "Having errors when updating addon?"
-    1. Remove previous addon version
+!!! info "Having errors when updating add-on?"
+    1. Remove previous add-on version
     2. Restart blender
-    3. Install new addon version
+    3. Install new add-on version

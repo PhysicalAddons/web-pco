@@ -1,23 +1,93 @@
 {% set documentation = [
     {
         'name': 'General',
-        'icon': 'icons/blender-icons/light_sun.svg',
+        'icon': 'icons/blender-icons/WORLD.svg',
         'parameters': [
             {
                 'name': 'Sun',
-                'excerpt': 'Select source of light. ',
+                'excerpt': 'Select source of light.',
                 'description': 'By default selects Physical Starlight and Atmosphere sun if addon is installed and enabled.'
             },
             {
                 'name': 'Planets',
                 'excerpt': 'Add or remove planet.',
                 'description': 'Allows planets to be added, removed and renamed for your convenience. Maximum count of planet is determined by ones hardware specification.'
-            },
+            }
         ]
     },
     {
-        'name': 'Planet',
-        'icon': 'icons/blender-icons/world_data.svg',
+        'name': 'Transform',
+        'icon': 'icons/blender-icons/ORIENTATION_GLOBAL.svg',
+        'parameters': [
+            {
+                'name': 'Transform mode',
+                'excerpt': 'Selection between ways of posistioning planets.',
+                'description': 'Select between global (X, Y, Z), viewer-based (azimuth, elevation & distance) or elliptical orbit (ellipse width & height + orbit rotation) positioning modes.',
+            },
+            {
+                'name': 'Radius',
+                'excerpt': 'Radius of the planet in meters.',
+                'description': '',
+            },
+            {
+                'name': 'Rotation',
+                'excerpt': 'XYZ rotation of the planet.',
+                'description': '',
+                'video': {
+                    'src':'../img/DOCUMENTATION/rotation.mp4',
+                    'alt':''
+                },
+            },
+            {
+                'name': 'Position',
+                'excerpt': 'XYZ position of the planet in world-space.',
+                'description': ''
+            },
+            {
+                'name': 'Azimuth',
+                'excerpt': 'Planet\'s azimuthal coordinates (in degrees) relative to viewer.',
+                'description': ''
+            },
+            {
+                'name': 'Elevation',
+                'excerpt': 'Planet\'s elevation (in degrees) relative to viewer.',
+                'description': ''
+            },
+            {
+                'name': 'Distance',
+                'excerpt': 'Planet\'s distance from the viewer in meters.',
+                'description': ''
+            },
+            {
+                'name': 'Orbit Planet Type',
+                'excerpt': 'The type of orbit target to use for orbit coordinates between a PCO planet, a Blender object or a point defined by XYZ world coordinates.',
+                'description': ''
+            },
+            {
+                'name': 'Ellipse Width',
+                'excerpt': 'Width of the elliptical orbit path in meters.',
+                'description': ''
+            },
+            {
+                'name': 'Ellipse Height',
+                'excerpt': 'Height of the elliptical orbit path in meters.',
+                'description': ''
+            },
+            {
+                'name': 'Orbit Rotation',
+                'excerpt': 'Rotation to orient orbit path in world space.',
+                'description': ''
+            },
+            {
+                'name': 'Orbit Point Angle',
+                'excerpt': 'Angle in orbit-space that determines current point in which the planet is located within orbit.',
+                'description': 'Use this value to rotate planet around in the orbit.'
+            }
+        ]
+    },
+    {
+        'name': 'Surface Material',
+        'icon': 'icons/blender-icons/MATERIAL.svg',
         'parameters': [
             {
                 'name': 'Albedo',
@@ -27,151 +97,253 @@
             {
                 'name': 'Roughness',
                 'excerpt': 'Sets how rought is the planet surface.',
-                'description': 'Surface roughness, also termed landscape, terrain, or topographic roughness in geomorphology, is directly connected to the unevenness of surface elevation values.'
+                'description': 'Surface roughness, also termed landscape, terrain, or topographic roughness in geomorphology, is directly connected to the unevenness of surface elevation values.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/roughness.mp4',
+                    'alt':''
+                },
 
             },
             {
                 'name': 'Height',
                 'excerpt': 'Gives planet its highs and lows.',
-                'description': 'Applies displacement map (also known as a height map or elevation map) to the surface.'
+                'description': 'Applies displacement map (also known as a height map or elevation map) to the surface.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/heightscale.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Emission',
                 'excerpt': 'Make certain parts of the planet emit light.',
-                'description': 'Applies emission map (also known as emissive map).'
+                'description': 'Applies emission map (also known as emissive map).',
+                'video': {
+                    'src': '../img/DOCUMENTATION/emission.mp4',
+                }
             },
             {
-                'name': 'Emission strength',
+                'name': 'Emission Strength',
                 'excerpt': 'Determines brightness of the parts that emit light.',
                 'description': ''
             },
         ]
     },
-
     {
         'name': 'Atmosphere',
-        'icon': 'icons/blender-icons/sticky_uvs_disable.svg',
+        'icon': 'icons/blender-icons/PROP_ON.svg',
         'parameters': [
             {
                 'name': 'Radius',
                 'excerpt': 'Radius of the atmosphere.',
+                'description': 'This determines the entire extend of the atmosphere at it\'s maximum.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/atmo_radius.mp4',
+                    'alt':''
+                },
+            },
+            {
+                'name': 'Ambient Light',
+                'excerpt': 'Ambient light amount on the atmosphere.',
+                'description': 'This is used to approximate the amount of light the atmosphere recieves from distant stars and scattering.',
+            },
+            {
+                'name': 'Atmosphere Layer',
+                'excerpt': 'One of six available atmosphere layers for the configuration.',
                 'description': '',
+            },
+            {
+                'name': 'Visible',
+                'excerpt': 'Toggles visibility of the layer.',
+                'description': '',
+            },
+            {
+                'name': 'Density Exponent',
+                'excerpt': 'Layer atmosphere density exponent.',
+                'description': 'This value adjusts the distribution of atmosphere layer density, higher values concentrate the atmosphere closer to it\'s densest point while lower values make more even, wider atmosphere distribution.',
+            },
+            {
+                'name': 'Start Level',
+                'excerpt': 'Layer\'s start level, as a ratio of full radius.',
+                'description': 'Atmosphere will start at this relative level above the planet\'s surface. Value of 0 makes this layer start directly on planet\'s surface.',
+            },
+            {
+                'name': 'End Level',
+                'excerpt': 'Layer\'s end level, as a ratio of full radius.',
+                'description': 'Atmosphere will end at this relative level above the planet\'s surface. Value of 1 makes this layer end at the atmosphere radius maximum.',
+            },
+            {
+                'name': 'Center of Density',
+                'excerpt': 'Atmosphere\'s densest level, as a ratio between start and end level.',
+                'description': 'Atmosphere will be densest and most concentrated at this level, fading to zero density as it approaches start and end levels in both directions. A value of 0 will make it start at the start level which is typical for most layers, but sometimes higher values may be used for certain layer types such as clouds, airglow etc.',
+            },
+            {
+                'name': 'Scattering',
+                'excerpt': 'Layer\'s scattering influence.',
+                'description': 'Use this to scale by how much layer scatters incoming light. Value of 0 makes this layer non-scattering while value of 1 makes it fully scatter light.',
+            },
+            {
+                'name': 'Absorption',
+                'excerpt': 'Layer\'s absorption influence.',
+                'description': 'Use this to scale by how much layer scatters incoming light. Value of 0 makes this layer non-absorbing while value of 1 makes it fully absorb light. Usually this parameter should be the same value as scattering, but it\'s left separate for cases where it may be needed.',
+            },
+            {
+                'name': 'Emission',
+                'excerpt': 'Layer\'s emission influence.',
+                'description': 'Values above 0 will make the layer glow with the color of it\'s scattering coefficient. Useful for effects such as auroras, airglow etc.',
+                'video': {
+                    'src':'',
+                    'alt':'Emission'
+                },
+            },
+            {
+                'name': 'Scattering Coefficient',
+                'excerpt': 'Layer\'s atmospheric scattering coefficient.',
+                'description': 'Affects the color of the atmosphere layer.',
+            },
+            {
+                'name': 'Layer Density',
+                'excerpt': 'Layer density model to determine how density varies across surface.',
+                'description':'Layer density model to determine how density varies across surface. `Value` sets density to a constant multiplier across the whole planet. `Texture` allows using a grayscale equirectangular texture to modulate density across the planet. `Aurora` enables procedural aurora texture to be used for layer\'s density.',
             },
             {
                 'name': 'Density',
-                'excerpt': 'Atmosphere density.',
-                'description': '',
-            },
-             {
-                'name': 'Rayleigh Insattering',
-                'excerpt': '',
-                'description': '',
-            },
-            {
-                'name': 'Rayleigh Scale Height',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Layer\'s density mulitplier.',
+                'description':'Adjust the density of the layer to make atmosphere appear denser or thinner.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/atmo_density.mp4',
+                    'alt':''
+                },
             },
             {
-                'name': 'Mie Inscattering',
-                'excerpt': '',
-                'description': '',
-            },
-            {
-                'name': 'Mie Scale Height',
-                'excerpt': '',
-                'description': '',
+                'name': 'Density Texture',
+                'excerpt': 'Density texture for modulating layer density.',
+                'description': 'Density texture for modulating layer density. This texture uses equirectangular projection like all the other planet textures. It is recommended to use grayscale texture, but any texture will work, while only its value will be used, ignoring hue and saturation. A value of 0 will result in the layer having 0 density in that area while value 1 will use full density as determined by Density multiplier parameter.',
             },
             {
                 'name': 'Noise Jitter',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Atmosphere noise jitter multiplier.',
+                'description':'Adjust amount of noise jitter used to smooth out atmosphere.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/atmo_noise.mp4',
+                    'alt':''
+                },
             },
             {
-                'name': 'Reflection Jitter Miltiplier',
-                'excerpt': '',
-                'description': '',
+                'name': 'Reflection Jitter Multiplier',
+                'excerpt': 'Reflection noise jitter multiplier.',
+                'description':'Multiplier for reflection jitter, use this to reduce noise in reflections (since they only do 1 sample so the reflected atmosphere can end up noisy).',
             },
         ]
     },
-
     {
         'name': 'Rings',
-        'icon': 'icons/blender-icons/mod_fluid.svg',
+        'icon': 'icons/blender-icons/PROP_OFF.svg',
         'parameters': [
             {
-                'name': 'Texture',
-                'excerpt': '',
+                'name': 'Rings Type',
+                'excerpt': 'Select ring type between `Procedural`, `Texture` or `Disabled`.',
                 'description': '',
+            },
+            {
+                'name': 'Texture',
+                'excerpt': '1D ring texture. Both color and alpha are used.',
+                'description': 'This texture only uses X coordinates to parse data, so essentially a 1D texture is needed as any extra information stored in subsequent vertical pixel lines will be ignored. The RGB values of the texture are used to determine the color of rings and alpha is used for particle density within rings, with value of 0 essentially creating gaps in rings. The texture is interpolated linearily starting from rings inner radius to outer radius and mapping texture\'s left and right edges to them accordingly.',
+            },
+            {
+                'name': 'Scale',
+                'excerpt': 'Scale of procedural ring texture.',
+                'description': 'Higher values create more and thinner rings.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_scale.mp4',
+                    'alt':''
+                },
+            },
+            {
+                'name': 'Detail',
+                'excerpt': 'Detail level of procedural ring texture.',
+                'description': 'Increasing this parameter adds extra smaller ring details inbetween main rings.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_detail.mp4',
+                    'alt':'Ring Details'
+                },
+            },
+            {
+                'name': 'Roughness',
+                'excerpt': 'Roughness within procedural ring texture.',
+                'description': 'Increasing this value makes the small detail rings more visible.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_roughness.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Color Tint',
-                'excerpt': '',
+                'excerpt': 'Color tint of rings.',
                 'description': '',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_color_tint.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Rotation',
-                'excerpt': '',
+                'excerpt': 'Ring rotation relative to the planet. ',
                 'description': '',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_rotation.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Inner Radius',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Inner radius of rings, as a multiple of planet radius.',
+                'description': 'Value of 1 will make the rings start from planet surface, higher values will offset them.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_inner_radius.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Outer Radius',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Outer radius of rings, as a multiple of planet radius.',
+                'description': 'Keep this higher than inner radius.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_outer_radius.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Indirect Shadow Factor',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Multiplier for tweaking the planet\'s shadow influence on indirect light cast by rings on the planet.',
+                'description': 'Gives artistic control over the shading, higher values make the indirect light darkening effect stronger when the rings receive a shadow.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_indirect_shadow.mp4',
+                    'alt':''
+                },
             },
             {
                 'name': 'Translucency',
-                'excerpt': '',
-                'description': '',
+                'excerpt': 'Translucency of rings.',
+                'description': 'How much light scatters through the rings and reach the opposite side, higher values will make the rings appear brighter and more translucent when viewed from opposite side of the light direction.',
+                'video': {
+                    'src':'../img/DOCUMENTATION/ring_translucency.mp4',
+                    'alt':''
+                },
             },
-        ]
-    },
-    {
-        'name': 'Transform',
-        'icon': 'icons/blender-icons/mod_fluid.svg',
-        'parameters': [
-            {
-                'name': 'Radius',
-                'excerpt': 'Radius of the planet.',
-                'description': '',
-            },
-            {
-                'name': 'Rotation',
-                'excerpt': 'Rotation of the planet.',
-                'description': '',
-            },
-            {
-                'name': 'Transform mode',
-                'excerpt': 'Selection between ways of posistioning planets.',
-                'description': 'Select between global (X, Y, Z), viewer-based (azimuth, elevation & distance) or elliptical orbit (ellipse width & height + orbit rotation) positioning modes.',
-            },
-
         ]
     }
    
 ]%}
 
 !!! tip ""
-    Hey :wave:, first time here? You can find the installation guide and first run in the [getting started](/pco/getting-started/) section.
+    Hey👋, first time here? You can find the installation guide and first run in the [getting started](/pco/getting-started/) section.
 
-!!! warning ""
-    ⚠️ We are currently updating documentation. Some of the entries may be empty. 
 
 * [General](#general)
-* [Planet](#planet)
+* [Transform](#transform)
+* [Surface Material](#surface-material)
 * [Atmosphere](#atmosphere)
 * [Rings](#rings)
-* [Transform](#transform)
 
 {% for section in documentation %}
 ## <span class="twemoji">{% include section.icon %}</span> {{ section.name }}
