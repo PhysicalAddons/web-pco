@@ -1,3 +1,30 @@
+### 1.0.0 <small>- released 04.09.2024</small>
+
+[![Release 1.0.0 banner](img/releases/pco1.0.0.jpg)](img/releases/pco1.0.0.jpg)
+
+`new:`{: .label-new }
+
+Reworked atmosphere model:
+
+- Upgraded atmosphere calculations to more accurate and flexible ones.
+- Added a layer system with 6 fully customizable layer slots that can influence the scattering, absorption, and emission of the atmosphere.
+- Added ability to use density textures on atmosphere, on a per-layer basis, enabling effects such as clouds and auroras.
+- Added procedural aurora density texture option to layers.
+
+`improvements:`{: .label-improvements }
+
+
+- UI improvements to make it more in-line with our other addons.
+- Improvements to depth calculations in all parts of the planet shader tree.
+- Improved shadows, reducing cases where they didn't show up involving rings.
+
+`fixed:`{: .label-fixed }
+
+- Fixed multiple sorting issues, especially involving atmosphere and rings.
+- Fixed planet not showing up when added to the scene.
+- Fixed edge cases that caused errors when removing/adding planets in certain ways.
+
+
 ### 0.2.0-alpha <small>- released 24.11.2022</small>
 
 <!-- [![Release 1.1.0 banner](img/releases/pco1.6.0.jpg)](img/releases/pcoa0.1.0.jpg) -->
