@@ -49,7 +49,7 @@
     <div class="parameter__info">
         <span>Radius of the planet in meters.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/radius.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -67,7 +67,7 @@
     <div class="parameter__info">
         <span>XYZ position of the planet in world-space.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/position.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -76,7 +76,7 @@
     <div class="parameter__info">
         <span>Planet's azimuthal coordinates (in degrees) relative to viewer.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/azimuth.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -85,7 +85,7 @@
     <div class="parameter__info">
         <span>Planet's elevation (in degrees) relative to viewer.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/elevation.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -94,7 +94,7 @@
     <div class="parameter__info">
         <span>Planet's distance from the viewer in meters.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/distance.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -112,7 +112,7 @@
     <div class="parameter__info">
         <span>Width of the elliptical orbit path in meters.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/ellipse_width.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -130,7 +130,7 @@
     <div class="parameter__info">
         <span>Rotation to orient orbit path in world space.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/orbit_rotation.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -139,7 +139,7 @@
     <div class="parameter__info">
         <span>Angle in orbit-space that determines current point in which the planet is located within orbit.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Use this value to rotate planet around in the orbit.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/orbit_point_angle.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -170,7 +170,7 @@
     <div class="parameter__info">
         <span>Gives planet its highs and lows.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Applies displacement map (also known as a height map or elevation map) to the surface.</span>
     </div>
-    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/heightscale.mp4" type="video/mp4"></video></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/height.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -188,7 +188,7 @@
     <div class="parameter__info">
         <span>Determines brightness of the parts that emit light.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/emission_strenght.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -210,7 +210,7 @@
     <div class="parameter__info">
         <span>Ambient light amount on the atmosphere.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">This is used to approximate the amount of light the atmosphere recieves from distant stars and scattering.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_ambient_light.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -228,7 +228,7 @@
     <div class="parameter__info">
         <span>Toggles visibility of the layer.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_visible.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -246,7 +246,7 @@
     <div class="parameter__info">
         <span>Layer's start level, as a ratio of full radius.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Atmosphere will start at this relative level above the planet's surface. Value of 0 makes this layer start directly on planet\'s surface.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_start_level.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -255,7 +255,7 @@
     <div class="parameter__info">
         <span>Layer's end level, as a ratio of full radius.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Atmosphere will end at this relative level above the planet's surface. Value of 1 makes this layer end at the atmosphere radius maximum.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_end_level.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -264,7 +264,7 @@
     <div class="parameter__info">
         <span>Atmosphere's densest level, as a ratio between start and end level.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Atmosphere will be densest and most concentrated at this level, fading to zero density as it approaches start and end levels in both directions. A value of 0 will make it start at the start level which is typical for most layers, but sometimes higher values may be used for certain layer types such as clouds, airglow etc.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_center_density.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -273,7 +273,7 @@
     <div class="parameter__info">
         <span>Layer's scattering influence.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Use this to scale by how much layer scatters incoming light. Value of 0 makes this layer non-scattering while value of 1 makes it fully scatter light.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_scattering.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -282,7 +282,7 @@
     <div class="parameter__info">
         <span>Layer's absorption influence.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Use this to scale by how much layer scatters incoming light. Value of 0 makes this layer non-absorbing while value of 1 makes it fully absorb light. Usually this parameter should be the same value as scattering, but it's left separate for cases where it may be needed.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_absorption.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -291,7 +291,7 @@
     <div class="parameter__info">
         <span>Layer's emission influence.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Values above 0 will make the layer glow with the color of it's scattering coefficient. Useful for effects such as auroras, airglow etc.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_emission.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -300,7 +300,7 @@
     <div class="parameter__info">
         <span>Layer's atmospheric scattering coefficient.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Affects the color of the atmosphere layer.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_scattering_coefficient.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -318,7 +318,7 @@
     <div class="parameter__info">
         <span>Layer's density mulitplier.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Adjust the density of the layer to make atmosphere appear denser or thinner.</span>
     </div>
-    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_density.mp4" type="video/mp4"></video></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/atmo_layer_density.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -327,7 +327,7 @@
     <div class="parameter__info">
         <span>Density texture for modulating layer density.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Density texture for modulating layer density. This texture uses equirectangular projection like all the other planet textures. It is recommended to use grayscale texture, but any texture will work, while only its value will be used, ignoring hue and saturation. A value of 0 will result in the layer having 0 density in that area while value 1 will use full density as determined by Density multiplier parameter.</span>
     </div>
-    <div class="parameter__video"></div>
+    <div class="parameter__video"><img src="../img/DOCUMENTATION/atmo_density_texture.png" alt="" /></div>
 </div>
 
 
@@ -403,7 +403,7 @@
     <div class="parameter__info">
         <span>Color tint of rings.</span>
     </div>
-    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/ring_color_tint.mp4" type="video/mp4"></video></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/ring_tint.mp4" type="video/mp4"></video></div>
 </div>
 
 
@@ -439,7 +439,7 @@
     <div class="parameter__info">
         <span>Multiplier for tweaking the planet's shadow influence on indirect light cast by rings on the planet.</span><span style="margin-left: 4px; color: rgba(0,0,0,.5)">Gives artistic control over the shading, higher values make the indirect light darkening effect stronger when the rings receive a shadow.</span>
     </div>
-    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/ring_indirect_shadow.mp4" type="video/mp4"></video></div>
+    <div class="parameter__video"><video autoplay loop muted playsinline ><source src="../img/DOCUMENTATION/ring_indirect_shadow_factor.mp4" type="video/mp4"></video></div>
 </div>
 
 
