@@ -1,3 +1,28 @@
+### 1.1.0 <small>- released 27.11.2024</small>
+
+[![Release 1.1.0 banner](img/releases/pco1.1.0.jpg)](img/releases/pco1.1.0.jpg)
+
+`new:`{: .label-new }
+
+- The addon now ships with **built-in presets**.
+- Introduced a new and improved atmosphere model with various phase functions.
+- Added the ability to control the **atmosphere layer height** using a texture.
+- Included **background stars** to enhance the planetary experience out-of-the-box.
+- Planets now utilize both a physical radius, used for light calculations, and a visual radius, which scales the planet using Blender’s object scale.
+- Added a performant Worley noise approximation to enhance detail in atmosphere layer textures.
+- Updated planet shaders to use a **HAPKE shader model**, providing realistic retroreflectivity with adjustable parameters.
+
+`improvements:`{: .label-improvements }
+
+- Improved viewport **performance of rotating** and adjusting **sun** lighting.
+- Atmosphere parameters are now provided with physical values.
+- Preset system has been improved and now supports textures.
+
+`fixed:`{: .label-fixed }
+
+- Several rendering improvements and fixes to make shadows, atmosphere, planet sorting consistent and realistic.
+
+
 ### 1.0.0 <small>- released 04.09.2024</small>
 
 [![Release 1.0.0 banner](img/releases/pco1.0.0.jpg)](img/releases/pco1.0.0.jpg)
