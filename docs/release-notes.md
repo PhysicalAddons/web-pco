@@ -1,3 +1,18 @@
+### 1.1.1 <small>- released 13.12.2024</small>
+
+`new:`{: .label-new }
+
+- Added rotation to atmosphere layers.
+- Added option to decouple star rotatation from sun.
+- Added rotation to stars.
+
+`fixed:`{: .label-fixed }
+
+- Fixed sun color not being used correctly by the shader.
+- Fixed atmosphere layers not rotating with planet.
+- Fixed stars mode "none" not linking nodes correctly.
+
+
 ### 1.1.0 <small>- released 27.11.2024</small>
 
 [![Release 1.1.0 banner](img/releases/pco1.1.0.jpg)](img/releases/pco1.1.0.jpg)
