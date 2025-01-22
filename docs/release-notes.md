@@ -1,3 +1,10 @@
+### 1.1.2 <small>- released 22.01.2025</small>
+
+`fixed:`{: .label-fixed }
+
+- Fixed the fixed layer height texture not using the correct texture property.
+- Fixed texture and detail breaking when switching to a different mode.
+
 ### 1.1.1 <small>- released 13.12.2024</small>
 
 `new:`{: .label-new }
